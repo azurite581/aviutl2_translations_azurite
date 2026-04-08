@@ -37,15 +37,15 @@ aviutl2-translations_azurite/
 ├─ tools/
 │  └─ merge.ps1        # Script to merge language files into a single .aul2 file
 └─ Translations/
-├─ Template/           # Template files for each script/plugin
-│  ├─ ColorHalftone.aul2
-│  └─ ...
-├─ English/
-│  ├─ ColorHalftone.aul2
-│  └─ ...
-└─ 简体中文/
-    ├─ ColorHalftone.aul2
-    └─ ...
+    ├─ Template/           # Template files for each script/plugin
+    │  ├─ ColorHalftone.aul2
+    │  └─ ...
+    ├─ English/
+    │  ├─ ColorHalftone.aul2
+    │  └─ ...
+    └─ 简体中文/
+        ├─ ColorHalftone.aul2
+        └─ ...
 ```
 
 ### 2. Edit translation files
