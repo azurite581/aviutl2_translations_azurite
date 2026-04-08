@@ -1,0 +1,15 @@
+; Target: Hex-Tiling (https://github.com/azurite581/AviUtl2-Hex-Tiling)
+; Target Version: v0.1.0
+; Language: Chinese
+; Translator(s):
+;   Nsyw
+
+[Hex-Tiling]
+タイル設定=瓦片设置
+サイズ=尺寸
+タイルサイズ=瓦片尺寸
+回転強度=旋转强度
+コントラスト補正=对比度修正
+重み表示=显示权重
+画像ファイル=图片文件
+その他=其他

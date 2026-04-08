@@ -1,0 +1,20 @@
+; Target: ポイントズーム (https://github.com/azurite581/AviUtl2-PointZoom)
+; Target Version: v2.0.0
+; Language: Chinese
+; Translator(s):
+;   Nsyw
+
+[ポイントズーム]
+ポイントズーム=点变焦
+ズーム=变焦
+拡大率=缩放率
+補間なし=无插值
+目標座標=目标坐标
+領域外=区域外
+モード=模式
+指定色=指定颜色
+引き伸ばす=拉伸
+ループ=拼贴
+ミラー=镜像
+色=颜色
+その他=其他
