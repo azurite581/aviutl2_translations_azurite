@@ -1,0 +1,30 @@
+; Target: 中心ずらし_A (https://github.com/azurite581/AviUtl2-PointZoom)
+; Target Version: v0.1.0
+; Language: <Language Name>
+; Translator(s):
+;   <Name1>
+;   <Name2> (<Optional URL>)
+
+[中心ずらし_A.aux2]
+中心ずらし_A=Adjust Pivot A
+設定=Settings
+変更時にオフセットをリセット=Reset offset on change
+ボタンサイズ=Button Scale
+閉じる=Close
+
+[中心ずらし_A]
+中心ずらし_A=Adjust Pivot A
+位置=Position
+左上=Top Left
+上=Top
+右上=Top Right
+左=Left
+中心=Center
+右=Right
+左下=Bottom Left
+下=Bottom
+右下=Bottom Right
+オフセットX=X offset
+オフセットY=Y offset
+オブジェクトを移動=Move Object
+その他=Others
