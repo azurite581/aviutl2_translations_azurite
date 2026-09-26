@@ -44,7 +44,7 @@ jobs:
         Copy-Item ".\package.ini" ".\out\package\" -Force
         Copy-Item ".\out\English.${env:AUTHOR}.aul2" ".\out\package\Language\" -Force
         Copy-Item ".\out\简体中文.${env:AUTHOR}.aul2" ".\out\package\Language\" -Force
-        Compress-Archive -Path ".\out\package\*" -DestinationPath ".\out\aviutl2_translations_${env:AUTHOR}_en_${env:VERSION}.au2pkg.zip" -Force
+        Compress-Archive -Path ".\out\package\*" -DestinationPath ".\out\aviutl2_translations_${env:AUTHOR}_${env:VERSION}.au2pkg.zip" -Force
         Remove-Item ".\out\package" -Recurse -Force
       env:
         VERSION: ${{ github.ref_name }}
@@ -52,7 +52,7 @@ jobs:
     - name: Create release notes
       run: |
         gh release create "${env:VERSION}" --title "${env:VERSION}" --generate-notes
-        gh release upload "${env:VERSION}" ".\out\*_${env:VERSION}.zip"
+        gh release upload "${env:VERSION}" ".\out\*_${env:VERSION}.au2pkg.zip"
       env:
         VERSION: ${{ github.ref_name }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
