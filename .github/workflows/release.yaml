@@ -24,6 +24,15 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Set package version
+      run: |
+        $path = "./package.ini"
+        $content = Get-Content $path -Raw
+        $content = $content.Replace('${VERSION}', $env:VERSION)
+        Set-Content $path $content -NoNewline
+      env:
+        VERSION: ${{ github.ref_name }}
+
     - name: Merge into a single language file
       run: |
         .\tools\merge.ps1 -input_dir ".\Translations\English" -output ".\out\English.${env:AUTHOR}.aul2"
@@ -31,8 +40,12 @@ jobs:
 
     - name: Create zip file
       run: |
-        Compress-Archive -Path ".\out\English.${env:AUTHOR}.aul2" -DestinationPath ".\out\${env:AUTHOR}_en_${env:VERSION}.zip" -Force
-        Compress-Archive -Path ".\out\简体中文.${env:AUTHOR}.aul2" -DestinationPath ".\out\${env:AUTHOR}_zh-Hans_${env:VERSION}.zip" -Force
+        New-Item -ItemType Directory -Path ".\out\package\Language" -Force | Out-Null
+        Copy-Item ".\package.ini" ".\out\package\" -Force
+        Copy-Item ".\out\English.${env:AUTHOR}.aul2" ".\out\package\Language\" -Force
+        Copy-Item ".\out\简体中文.${env:AUTHOR}.aul2" ".\out\package\Language\" -Force
+        Compress-Archive -Path ".\out\package\*" -DestinationPath ".\out\aviutl2_translations_${env:AUTHOR}_en_${env:VERSION}.au2pkg.zip" -Force
+        Remove-Item ".\out\package" -Recurse -Force
       env:
         VERSION: ${{ github.ref_name }}
 
