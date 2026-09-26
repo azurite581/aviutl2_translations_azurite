@@ -1,5 +1,5 @@
 ; Target: 中心ずらし_A (https://github.com/azurite581/AviUtl2-PointZoom)
-; Target Version: v0.3.0
+; Target Version: v0.5.0
 ; Language: Chinese
 ; Translator(s):
 ;   azurite
@@ -8,6 +8,7 @@
 中心ずらし_A=中心偏移_A
 設定=设置
 変更時にオフセットをリセット=更改时重置偏移量
+ボタンサイズをウィンドウに合わせる=使按钮大小适应窗口
 ボタンサイズ=按钮大小
 閉じる=关闭
 情報=关于
