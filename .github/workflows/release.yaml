@@ -51,8 +51,8 @@ jobs:
 
     - name: Create release notes
       run: |
-        gh release create "${env:VERSION}" --title "${env:VERSION}" --generate-notes
-        gh release upload "${env:VERSION}" ".\out\*_${env:VERSION}.au2pkg.zip"
+        dotnet .\tools\ChangelogExtract.cs -- .\CHANGELOG.md .\EXTRACTED.md --semver "$env:VERSION"
+        gh release create "${env:VERSION}" --notes-file EXTRACTED.md ".\out\*_${env:VERSION}.au2pkg.zip"
       env:
         VERSION: ${{ github.ref_name }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
