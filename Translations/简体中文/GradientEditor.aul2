@@ -1,5 +1,5 @@
 ; Target: GradientEditor (https://github.com/azurite581/AviUtl2-GradientEditor)
-; Target Version: v0.7.2
+; Target Version: v0.8.0
 ; Language: 简体中文
 ; Translator(s):
 ;   Nsyw
@@ -63,12 +63,12 @@
 履歴=历史记录
 すべての履歴を削除=删除所有历史记录
 ファイル=文件
-プリセットを読み込む=加载预设
-プリセットを出力=输出预设
+GRD ファイルを読み込む=导入 GRD 文件
+GRD ファイルを出力=导出 GRD 文件
 現在のグラデーション=当前渐变
 設定=设置
-UIの設定=UI设置
-UIのサイズ=UI大小
+UI の設定=UI 设置
+UI のサイズ=UI 大小
 新規=新建
 色設定=颜色设置
 アルファ設定=透明度设置
@@ -83,8 +83,8 @@ UIのサイズ=UI大小
 前のマーカーを選択=选择上一个标记
 次のマーカーを選択=选择下一个标记
 現在フレームにオブジェクトを作成=在当前帧创建对象
-ヘルプ=帮助
-バージョン情報=关于
+その他=其他
+情報=关于
 
 [MultiGradient@GradientEditor]
 MultiGradient@GradientEditor=多重渐变@GradientEditor

@@ -1,5 +1,5 @@
 ; Target: GradientEditor (https://github.com/azurite581/AviUtl2-GradientEditor)
-; Target Version: v0.7.2
+; Target Version: v0.8.0
 ; Language: <Language Name>
 ; Translator(s):
 ;   <Name1>
@@ -63,12 +63,12 @@
 履歴=History
 すべての履歴を削除=Delete All History
 ファイル=File
-プリセットを読み込む=Load Preset
-プリセットを出力=Export Preset
+GRD ファイルを読み込む=Import the GRD file
+GRD ファイルを出力=Export the GRD file
 現在のグラデーション=Current Gradient
 設定=Settings
-UIの設定=UI Settings
-UIのサイズ=UI Size
+UI の設定=UI Settings
+UI のサイズ=UI Size
 新規=New
 色設定=Color Settings
 アルファ設定=Alpha Settings
@@ -83,8 +83,8 @@ UIのサイズ=UI Size
 前のマーカーを選択=Select Previous Marker
 次のマーカーを選択=Select Next Marker
 現在フレームにオブジェクトを作成=Create an object in the current frame
-ヘルプ=Help
-バージョン情報=About
+その他=Etc
+情報=About
 
 [MultiGradient@GradientEditor]
 強さ=Intensity
