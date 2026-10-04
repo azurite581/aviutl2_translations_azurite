@@ -85,6 +85,16 @@ To add support for a new language:
 3. Optionally add translator credits in each file.
 4. Open a pull request.
 
+### [Optional] Merging Language Files
+
+If you want to combine multiple language files (or a directory containing them) into a single language file, you can do so by running `merge.ps1` located in the `tools\` folder.
+
+Example: Combining the language files under the English folder into a single language file and outputting it under `out\`
+
+```powershell
+.\tools\merge.ps1 -input_dir ".\Translations\English" -output ".\out\English.azurite.aul2"
+```
+
 ## Acknowledgements
 
 Thank you for contributing! — your work improves this project for everyone.
