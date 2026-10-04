@@ -50,9 +50,23 @@ jobs:
         VERSION: ${{ github.ref_name }}
 
     - name: Create release notes
+      shell: pwsh
       run: |
+        $ErrorActionPreference = 'Stop'
+
+        $ok = $false
+        foreach ($i in 1..3) {
+          dotnet restore .\tools\ChangelogExtract.cs -v:n
+          if ($LASTEXITCODE -eq 0) { $ok = $true; break }
+          Start-Sleep -Seconds (5 * $i)
+        }
+        if (-not $ok) { throw "dotnet restore failed" }
+
         dotnet .\tools\ChangelogExtract.cs -- .\CHANGELOG.md .\EXTRACTED.md --semver "$env:VERSION"
-        gh release create "${env:VERSION}" --notes-file EXTRACTED.md ".\out\*_${env:VERSION}.au2pkg.zip"
+        if ($LASTEXITCODE -ne 0) { throw "ChangelogExtract failed" }
+        if (-not (Test-Path .\EXTRACTED.md)) { throw "EXTRACTED.md was not generated" }
+
+        gh release create "$env:VERSION" --notes-file EXTRACTED.md ".\out\*_${env:VERSION}.au2pkg.zip"
       env:
         VERSION: ${{ github.ref_name }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
